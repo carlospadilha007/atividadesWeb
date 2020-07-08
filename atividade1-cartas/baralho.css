@@ -1,0 +1,100 @@
+body{
+    background-color: green;
+}
+
+@font-face {
+    font-family: 'itc_tiffanyheavy';
+    src: url('fonts/itc-tifany/itc-tiffany-heavy-webfont.woff2') format('woff2'),
+         url('fonts/itc-tifany/itc-tiffany-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div#interface{
+    margin-top: 0;
+    text-align: center;
+}
+
+div#interface div#sorteio{
+    margin: 44%;
+    margin-top: 0;
+    position: relative;
+}
+
+div#interface div#sorteio img#copas{
+    position: absolute;
+    width: 25px;
+    padding: 11px;
+    display: none;
+
+}
+
+div#interface div#sorteio img#espadas{
+    position: absolute;
+    width: 25px;
+    padding: 11px;
+}
+
+div#interface div#sorteio img#ouros{
+    position: absolute;
+    width: 25px;
+    padding: 11px;
+    display: none;
+}
+
+div#interface div#sorteio img#paus{
+    position: absolute;
+    width: 25px;
+    padding: 11px;
+    display: none;
+}
+
+div#interface div#sorteio img#carta{
+}
+
+div#interface div#sorteio img#copas2{
+    position: absolute;
+    width: 25px;
+    margin-top: 245px;
+    padding: 11px;
+    margin-left: 160px;
+    display: none;
+}
+
+div#interface div#sorteio img#espadas2{
+    position: absolute;
+    width: 25px;
+    margin-top: 245px;
+    padding: 3px;
+    margin-left: 167px;
+}
+
+div#interface div#sorteio img#ouros2{
+    position: absolute;
+    width: 25px;
+    margin-top: 245px;
+    padding: 5px;
+    margin-left: 163px;
+    display: none;
+}
+
+div#interface div#sorteio img#paus2{
+    position: absolute;
+    width: 25px;
+    margin-top: 245px;
+    padding: 11px;
+    margin-left: 160px;
+    display: none;
+}
+
+div#interface div#sorteio p#numero{
+    position: absolute;
+    font-family: itc_tiffanyheavy, Arial, Helvetica, sans-serif;
+    width: 25px;
+    margin-top: 90px;
+    padding: 11px;
+    margin-left: 75px;
+    font-size: 50pt;
+    color: red;
+}
