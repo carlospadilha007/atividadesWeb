@@ -53,13 +53,17 @@ div div h2#data_completa{
 
 div div h1#hora{
     font-size: 40pt;
+    width: 180px;
     font-family: digital-normal, Arial, Helvetica, sans-serif;
     color: red;
     background-color: black;
     padding: 5px;
+    text-align: center;
 }
 
 div div h2#mensagem{
     font-family: Champagne, Arial, Helvetica, sans-serif;
     color: red;
+    width: 180px;
+    text-align: center;
 }

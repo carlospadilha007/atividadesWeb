@@ -12,8 +12,71 @@
         <div id="rlg">
             <h2 id="dia_semana">quarta</h2>
             <h2 id="data_completa">8 de junho de 2020</h2>
-            <h1 id="hora">01:02:04</h1>
+            <h1 id="hora">00:00:00</h1>
             <h2 id="mensagem">blabla</h2>
+
+        <script type="text/javascript">
+            const diasSemana = ["Domingo", "Segunda - Feira", "Terça - Feira", "Quarta - Feira",
+                                "Quinta - Feira", "Sexta - Feira", "Sabado"]
+
+            const mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro",
+                        "Outubro", "Novembro", "Dezembro"]
+            
+            const setHorario = () =>{
+                hora.innerText = `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`
+            }
+
+            const frases = ["Nada é para sempre, dizemos, mas há momentos que parecem ficar suspensos, pairando sobre o fluir inexorável do tempo.",
+                            "Não importa a idade que temos, há sempre um momento em que é preciso chamar um adulto.",
+                            "E se tudo fosse para sempre, você saberia dar valor aos bons momentos?",
+                            "O sábio nunca diz tudo o que pensa, mas pensa sempre tudo o que diz.", 
+                            "A nossa maior glória não reside no fato de nunca cairmos, mas sim em levantarmo-nos sempre depois de cada queda.",
+                            "O importante não é vencer todos os dias, mas lutar sempre.", 
+                            "Quem comete uma injustiça é sempre mais infeliz que o injustiçado.",
+                            "Creia em si, mas não duvide sempre dos outros.", 
+                            "Aqueles que não fazem nada estão sempre dispostos a criticar os que fazem algo",
+                            "As pessoas que falam muito, mentem sempre, porque acabam esgotando seu estoque de verdades.",
+                            "Quem sabe o que é correto age corretamente (...) O verdadeiro conhecimento leva a agir corretamente.",
+                            "Não ganhe o mundo e perca sua alma; sabedoria é melhor que prata e ouro",
+                            "Se você agir sempre com dignidade, pode não melhorar o mundo, mas uma coisa é certa: haverá na Terra um canalha a menos.",
+                            "Todo mundo é capaz de dominar uma dor, exceto quem a sente.",
+                            "Viver é a coisa mais rara do mundo. A maioria das pessoas apenas existe.",
+                            "Tenho em mim todos os sonhos do mundo.", 
+                            "O mundo é um lugar perigoso de se viver, não por causa daqueles que fazem o mal, mas sim por causa daqueles que observam e deixam o mal acontecer.",
+                            "O mundo não está ameaçado pelas pessoas más, e sim por aquelas que permitem a maldade.",
+                            "Tente mover o mundo – o primeiro passo será mover a si mesmo.",
+                            "Somos o que pensamos. Tudo o que somos surge com nossos pensamentos. Com nossos pensamentos, fazemos o nosso mundo.",
+                            "A imaginação é mais importante que a ciência, porque a ciência é limitada, ao passo que a imaginação abrange o mundo inteiro.",
+                            "Olho por olho, e o mundo acabará cego.",
+                            "Aprenda como se você fosse viver para sempre. Viva como se você fosse morrer amanhã.", 
+                            "Um irmão pode não ser um amigo, mas um amigo será sempre um irmão.",
+                            "É fácil amar os que estão longe. Mas nem sempre é fácil amar os que vivem ao nosso lado.",
+                            "A verdadeira medida de um homem não se vê na forma como se comporta em momentos de conforto e conveniência, mas em como se mantém em tempos de controvérsia e desafio.",
+                            "A vida é muito curta para que se perca tempo numa existência medíocre.",
+                            "Quem respeita o governador e não respeita a faxineira não é um líder, e sim um interesseiro.",
+                            "Quem respeita o governador e não respeita a faxineira não é um líder, e sim um interesseiro.",
+                            "Onde quer que nos encontremos, são os nossos amigos que constituem o nosso mundo.",
+                            "Num mundo que se faz deserto, temos sede de encontrar um amigo.",
+                            "As três coisas mais difíceis do mundo são: guardar um segredo, perdoar uma ofensa e aproveitar o tempo.",
+                            "Quando todo mundo quer saber é porque ninguém tem nada com isso."
+                        ]
+            const data = new Date()
+            const dia = document.getElementById("dia_semana")
+            const dataCompleta = document.getElementById("data_completa")
+            const hora = document.getElementById("hora")
+            const mensagem = document.getElementById("mensagem")
+            dia.innerText = diasSemana[data.getDay()]
+            dataCompleta.innerText = `${data.getDate()} de ${mes[data.getMonth()]} de ${data.getFullYear()}`
+            mensagem.innerText = frases[parseInt(data.getDate()) - 1]
+
+            setInterval(() => {
+                let d = new Date()
+                h = parseInt(d.getHours()) < 10 ? `0${d.getHours().toString()}`: d.getHours().toString()  
+                m = parseInt(d.getMinutes()) < 10 ? `0${d.getMinutes().toString()}` : d.getMinutes().toString()
+                s = parseInt(d.getSeconds()) < 10 ? `0${d.getSeconds().toString()}` : d.getSeconds().toString()
+                hora.innerText = `${h}:${m}:${s}`
+            }, 1000);
+        </script>
         </div>
     </div>
 </body>
