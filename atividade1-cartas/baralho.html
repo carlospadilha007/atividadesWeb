@@ -20,6 +20,47 @@
             <p id="numero">T</p>
             <img src="imagens/paus.png" id="paus2">
             <img src="imagens/carta.jpg" id="carta">
+            <script type="text/javascript">
+                const valorCartas = ["A", "K", "Q", "J", "T", "9",
+                                     "8", "7", "6", "5", "4", "3", "2"]
+                const valor = document.getElementById("numero")
+                const naipesCima = []
+                const naipesBaixo = []
+                
+                naipesCima.push(document.getElementById("copas"))
+                naipesCima.push(document.getElementById("ouros"))
+                naipesCima.push(document.getElementById("espadas"))
+                naipesCima.push(document.getElementById("paus"))
+                naipesBaixo.push(document.getElementById("copas2"))
+                naipesBaixo.push(document.getElementById("ouros2"))
+                naipesBaixo.push(document.getElementById("espadas2"))
+                naipesBaixo.push(document.getElementById("paus2"))
+                
+                const limpaDisplay = (item) =>{
+                    item.style.display = "none"
+                    item.style.display = "none"
+                }
+
+                const auterarDisplay = () => {
+                    let sorteioNaipe = Math.floor(Math.random() * 4) // sorteio do naipe
+                    naipesCima[sorteioNaipe].style.display = "block"
+                    naipesBaixo[sorteioNaipe].style.display = "block"
+                    let sorteioValor = Math.floor(Math.random() * 13)
+                    if(sorteioNaipe < 2){
+                        valor.style.color = "red"
+                    }else{
+                        valor.style.color = "black"
+                    }
+                    valor.innerText = valorCartas[sorteioValor]
+                }
+
+                auterarDisplay()
+                setInterval(() => {
+                    naipesCima.forEach(limpaDisplay)
+                    naipesBaixo.forEach(limpaDisplay)
+                    auterarDisplay()
+                }, 10000);
+            </script>
         </div>
     </div>
 </body>

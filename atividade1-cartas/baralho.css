@@ -34,6 +34,7 @@ div#interface div#sorteio img#espadas{
     position: absolute;
     width: 25px;
     padding: 11px;
+    display: none;
 }
 
 div#interface div#sorteio img#ouros{
@@ -68,6 +69,7 @@ div#interface div#sorteio img#espadas2{
     margin-top: 245px;
     padding: 3px;
     margin-left: 167px;
+    display: none;
 }
 
 div#interface div#sorteio img#ouros2{
@@ -94,7 +96,7 @@ div#interface div#sorteio p#numero{
     width: 25px;
     margin-top: 90px;
     padding: 11px;
-    margin-left: 75px;
+    margin-left: 70px;
     font-size: 50pt;
     color: red;
 }
